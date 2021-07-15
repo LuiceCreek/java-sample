@@ -37,7 +37,7 @@ public class KeySummary {
    */
   public Map<String, List<DataObject>> summarize(final List<DataObject> list) {
     return list.stream()
-        .collect(Collectors.groupingBy(data -> data.getKey()));
+        .collect(Collectors.groupingBy(DataObject::getKey));
   }
 
   /**
@@ -47,8 +47,8 @@ public class KeySummary {
    * @param list DataObjectリスト
    */
   public void show(final String key, final List<DataObject> list) {
-    System.out.println(String.format("key=%1$s", key));
-    list.stream().forEach(System.out::println);
+    System.out.printf("key=%1$s%n", key);
+    list.forEach(System.out::println);
     System.out.println("---");
   }
 }
