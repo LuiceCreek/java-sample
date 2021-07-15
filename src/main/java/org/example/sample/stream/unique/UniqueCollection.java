@@ -1,4 +1,4 @@
-package org.example.sample.stream;
+package org.example.sample.stream.unique;
 
 import java.util.Collections;
 import java.util.List;
